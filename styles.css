@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+}
+
+header {
+    background-color: #FFCFCF;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+body {
+    background-color: white;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 20px; /* Ajusta el espacio entre las columnas */
+}
+
+.izquierda,
+.derecha {
+    flex: 1;
+}
+
+.foto {
+    max-width: 100%;
+    max-height: 1200px;
+    border-radius: 20px;
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
+.foto img {
+    width: 100%; /* Asegura que la imagen ocupe todo el espacio disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Escala la imagen para que llene el contenedor manteniendo la relación de aspecto */
+    transition: transform 0.3s ease; /* Agrega una transición suave al pasar el mouse sobre la imagen */
+}
+
+.foto:hover img {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen al pasar el mouse sobre ella */
+}
+
+.derecha {
+    text-align: left;
+}
+
+.derecha h2 {
+    font-size: 34px;
+}
+
+.derecha p {
+    font-size: 18px;
+}
+
+footer {
+    background-color: #46CAF7;
+    padding: 20px;
+    text-align: center;
+    color: black;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+}
+
+.Logo-UADE {
+    max-width: 5pc;
+    max-height: 5pc;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: white;
+    }
+
+    header {
+        background-color: #FFCFCF;
+        padding: 20px;
+        text-align: center;
+        color: black;
+    }
+
+    body {
+        background-color: white
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .contenedor {
+        flex-direction: column; /* Cambia la disposición a columna en dispositivos móviles */
+    }
+
+    .foto,
+    .derecha {
+        max-width: 100%; /* Asegura que ambos elementos ocupen todo el ancho */
+    }
+
+    .izquierda {
+        flex: 1;
+        text-align: right;
+    }
+
+    .derecha {
+        flex: 1;
+        text-align: left;
+    }
+
+    .foto {
+        max-width: 100%;
+        max-height: 500px;
+        border-radius: 20px;
+    }
+
+    .derecha h2 {
+        font-size: 34px;
+    }
+
+    .derecha p {
+        font-size: 18px;
+    }
+
+    footer {
+        background-color: #46CAF7;
+        padding: 20px;
+        text-align: center;
+        color: black;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .Logo-UADE {
+        max-width: 10pc;
+        max-height: 10pc;
+    }
+}
